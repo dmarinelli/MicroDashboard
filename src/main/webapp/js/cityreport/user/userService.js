@@ -1,5 +1,5 @@
 restWrapper.user = {};
-restWrapper.hostUrl = 'http://api.citylink.leadprogrammer.com.ar/cityReportService';
+restWrapper.hostUrl = 'http://api.microservices.tk/cityReportService';
 
 
 cityReportDashboard.factory('UserService', function ($http) {

@@ -158,7 +158,7 @@ cityReportDashboard.controller('DashController', function($rootScope, $scope, $l
 
 function connectNotificationService(b){
 
-    var wsUrl= 'ws://api.citylink.leadprogrammer.com.ar:8000/cityReportService/events';
+    var wsUrl= 'ws://api.microservices.tk:8000/cityReportService/events';
     console.log('WebSockets Url : ' + wsUrl);
     var ws = new WebSocket(wsUrl);
 

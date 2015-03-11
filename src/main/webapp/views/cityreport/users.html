@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+		<h1 class="page-title txt-color-blueDark">
+			<i class="fa "></i> Usuarios
+
+		</h1>
+	</div>
+
+</div>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></article>
+		<!-- WIDGET END -->
+
+	</div>
+
+	<!-- end row -->
+
+	<!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+	//pageSetUp();
+
+	// PAGE RELATED SCRIPTS
+
+	/* remove previous elems */
+	if ($('.DTTT_dropdown.dropdown-menu').length) {
+		$('.DTTT_dropdown.dropdown-menu').remove();
+	}
+
+	// pagefunction	
+	var pagefunction = function() {
+
+	};
+
+	// load related plugins
+
+	loadScript(
+			"js/plugin/datatables/jquery.dataTables.min.js",
+			function() {
+				loadScript(
+						"js/plugin/datatables/dataTables.colVis.min.js",
+						function() {
+							loadScript(
+									"js/plugin/datatables/dataTables.tableTools.min.js",
+									function() {
+										loadScript(
+												"js/plugin/datatables/dataTables.bootstrap.min.js",
+												pagefunction);
+									});
+						});
+			});
+</script>

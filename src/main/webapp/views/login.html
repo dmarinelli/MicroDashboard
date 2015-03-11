@@ -1,0 +1,70 @@
+
+<div class="login-container">
+
+
+	<div class="modal-content login-center">
+
+
+		<link href="css/styles.css" rel="stylesheet"></link>
+
+
+		<div class="modal-header">
+		</div>
+
+		<div class="modal-body">
+
+
+			<div class="login_provider">
+				<div class="fb_button"  ng-click="socialLogin('facebook')"><a href=""><img width="235" height="41" src="img/login/login-facebook.png" alt="Login Facebook"></a></div>
+				<div class="twiit_button"  ng-click="socialLogin('twitter')"><a href=""><img width="235" height="41" src="img/login/login-twitter.png" alt="Login Twitter"></a></div>
+				<div class="google_button"  ng-click="socialLogin('google')"><a href=""><img width="235" height="41" src="img/login/login-googleplus.png" alt="Login Google Plus"></a></div>
+				<div class="yahoo_button" ng-click="socialLogin('yahoo')"><a href=""><img width="235" height="41" src="img/login/login-yahoo.png" alt="Login Yahoo"></a></div>
+			</div>
+
+
+
+			<div class="login_mail">
+				<div class="or">or</div>
+				<div class="login_inner">
+
+					<div class="loginwith"> Login with Email</div>
+					<form class="pure-form" ng-submit="loginUser(credentials)">
+						<input type="email" class="pure-input-1-3" placeholder="Email" name="email" ng-model="credentials.username" />
+
+						<input type="password" class="pure-input-1-3" placeholder="Password" name="token" ng-model="credentials.password" />
+						<div id="error_message"></div>
+
+						<button type="submit" class="login_button">Sign in</button>
+
+
+					</form>
+
+
+
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
+
+
+		<div class="modal-footer">
+			<div class="forgot-password"><a  ui-sref="forgot_password" data-toggle="modal" id="forgotpassword">Forgot Password?</a></div>
+			<div class="register-account"><a  ui-sref="signup" id="register" >Create a New Account</a></div>
+		</div>
+
+
+<script type="text/javascript">
+
+		loadScript("js/fb_init.js", function(){});
+
+</script>
+
+
+</div>
+</div>

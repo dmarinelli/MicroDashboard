@@ -1,0 +1,270 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+		<h1 class="page-title txt-color-blueDark">Gestionar Reporte</h1>
+	</div>
+</div>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article class="col-sm-12 col-md-12">
+
+			<!-- new widget -->
+			<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1"
+				data-widget-colorbutton="false" data-widget-editbutton="false"
+				data-widget-togglebutton="false" data-widget-deletebutton="false">
+
+				<header>
+					<span class="widget-icon"> <i
+						class="fa fa-bullhorn txt-color-white"></i>
+					</span>
+					<h2>Reporte Detalle</h2>
+					<!-- <div class="widget-toolbar">
+					add: non-hidden - to disable auto hide
+
+					</div>-->
+				</header>
+
+				<!-- widget div-->
+				<div data-ng-app="cityReportDashboard">
+					<div class="widget-body no-padding smart-form">
+
+						<!-- content goes here -->
+						<header>
+							<div class="category">
+								<b>Categoria: {{report.category.name}}</b>
+							</div>
+						</header>
+
+						<fieldset>
+							<div class="row">
+								<section class="col col-6">
+									<div class="row">
+										<section class="col col-6">
+											<label class="label">Estado</label> <label class="select">
+												<select name="status">
+													<option value="0" selected="" disabled="">Selecionar</option>
+													<option value="1">Nuevo</option>
+													<option value="2">En Progreso</option>
+													<option value="3">Resuelto</option>
+													<option value="4">En Espera</option>
+													<option value="5">Invalido</option>
+											</select> <i></i>
+											</label>
+										</section>
+
+										<section class="col col-6">
+											<label class="label">Prioridad</label> <label class="select">
+												<select name="priority">
+													<option value="0" selected="" disabled="">Selecionar</option>
+													<option value="1">Sin Asignar</option>
+													<option value="2">Critica</option>
+													<option value="3">Alta</option>
+													<option value="4">Media</option>
+													<option value="5">Baja</option>
+											</select> <i></i>
+											</label>
+										</section>
+									</div>
+									<div class="row">
+										<section class="col col-6">
+											<label class="label">Fecha de Recibido</label>
+											<label class="input"> <i
+												class="icon-append fa fa-calendar"></i> <input type="text"
+												name="creationDate" id="creationDate" value="{{report.creationDate}}"
+												placeholder="Fecha de Reporte" class="hasDatepicker" disabled="disabled">
+											</label>
+										</section>
+										<section class="col col-6">
+											<label class="label">Contactar Usuario</label> <label
+												class="input">
+												<button type="button" class="btn btn-primary btn-sm" onclick="">
+													<i class="fa fa-envelope"></i> Contactar</button>
+											</label>
+										</section>
+									</div>
+									<section>
+										<label class="label">Direccion</label> <label for="address"
+											class="input"> <input type="text" name="address"
+											placeholder="Direccion" value="{{report.location.address}}">
+
+										</label> <label class="label">Mapa</label>
+										<div data-ng-controller="OpenReportController">
+											<!-- widget edit box -->
+											<div class="jarviswidget-editbox">
+												<!-- This area used as dropdown edit box -->
+											</div>
+											<!-- end widget edit box -->
+
+<!-- 											<div id="map_canvas" class="google_maps_report" -->
+<!-- 												data-gmap-lat="{{report.location.latitude}}" -->
+<!-- 												data-gmap-lng="{{report.location.longitude}}" data-gmap-zoom="16">&nbsp;</div> -->
+											<div id="map_canvas" class="google_maps_report">&nbsp;</div>
+										</div>
+									</section>
+								</section>
+
+								<section class="col col-6">
+									<section>
+										<label class="label">Descripcion</label> <label
+											class="textarea"> <i class=""></i> <textarea
+												rows="20" name="description" placeholder="Sin descripcion">{{report.description}}</textarea>
+										</label>
+									</section>
+									<section>
+										<!-- MODAL PLACE HOLDER -->
+										<div class="modal fade" id="remoteModal" tabindex="-1"
+											role="dialog" aria-labelledby="remoteModalLabel"
+											aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<img src="{{imgUrl}}" alt="">
+												</div>
+											</div>
+										</div>
+										<!-- END MODAL -->
+
+										<div class="container img-crop">
+											<img src="{{imgUrl}}" alt="">
+											<div>
+												<!-- Button trigger modal -->
+												<a href="#" data-toggle="modal" data-target="#remoteModal"
+													class="btn btn-primary btn-lg pull-right header-btn hidden-mobile">
+													<i class="fa fa-circle-arrow-up fa-lg"></i>Abrir Imagen
+												</a>
+											</div>
+										</div>
+									</section>
+								</section>
+							</div>
+
+							<section>
+								<label class="label">Comentarios</label> <label class="textarea">
+									<i class="icon-append fa fa-comment"></i> <textarea rows="7"
+										name="comment"
+										placeholder="Puede ingresar aqui comentarios sobre el reporte."></textarea>
+								</label>
+							</section>
+						</fieldset>
+
+						<footer>
+							<button type="button" class="btn btn-danger"
+								onclick="window.history.back();">Salir</button>
+							<button type="button" class="btn btn-primary" onclick="">Imprimir</button>
+							<button type="button" class="btn btn-primary" onclick="">Generar
+								PDF</button>
+							<button type="button" class="btn btn-success" onclick="">
+								<b>Guardar</b>
+							</button>
+						</footer>
+						<!-- end content -->
+					</div>
+
+				</div>
+				<!-- end widget div -->
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+	</div>
+
+	<!-- end row -->
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+	pageSetUp();
+
+	// PAGE RELATED SCRIPTS
+
+	/* remove previous elems */
+	if ($('.DTTT_dropdown.dropdown-menu').length) {
+		$('.DTTT_dropdown.dropdown-menu').remove();
+	}
+
+	// pagefunction	
+	var pagefunction = function() {
+		
+		/*
+		 * Google Maps Initialize
+		 */
+		 
+	    $this = $("#map_canvas");
+	    $zoom_level = ($this.data("gmap-zoom"));
+	    $data_lat = ($this.data("gmap-lat"));
+	    $data_lng = ($this.data("gmap-lng"));//$scope.report.location.longitude;//($this.data("gmap-lng"));
+	    
+	    //console.log("$data_lat: " + $data_lat);
+	    //console.log("$data_lng: " + $data_lng);
+	    
+// 		xmlLoadMap();
+		
+	    function xmlLoadMap() {
+	    	
+	        var centerLatLng = new google.maps.LatLng($data_lat, $data_lng),
+	        mapOptions = {
+	            zoom: $zoom_level,
+	            center: centerLatLng,
+	            //disableDefaultUI: true,
+	            //mapTypeId : google.maps.MapTypeId.ROADMAP
+			    mapTypeControlOptions: {
+			      mapTypeIds: [google.maps.MapTypeId.SATELLITE , google.maps.MapTypeId.ROADMAP],
+			    }
+	        },
+	
+	        bounds = new google.maps.LatLngBounds(),
+	        infowindow = new google.maps.InfoWindow(),
+	        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+	        map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+			
+			marker = new google.maps.Marker({
+			position : new google.maps.LatLng($data_lat, $data_lng),
+			map : map,
+			icon : ('img/sa-default.png'),
+			scrollwheel : false,
+			streetViewControl : true,
+			title : "titulo"
+			}),
+							
+			google.maps.event.addListener(marker, 'click', function() {// click
+				// Setting the content of the InfoWindow
+				var contentString = '<div id="info-map" style="width:300px; height:85px; padding:0px;"><div>' + '<div style="display:inline-block; width:200px; float:left;"><b>' + "Aqui Set: {{report.location.address}}" + '</b><br/>' + '</div></div></div>';
+				infowindow.setContent(contentString);
+				infowindow.open(map, marker);
+
+				google.maps.event.addListener(map, 'click', function() {
+					infowindow.close()
+					})
+				});
+			
+	    }
+	};
+
+	// load related plugins
+
+ 	loadScript(
+ 			"js/plugin/datatables/jquery.dataTables.min.js",
+ 			function() {
+ 				loadScript(
+ 						"js/plugin/datatables/dataTables.colVis.min.js",
+ 						function() {
+ 							loadScript(
+ 									"js/plugin/datatables/dataTables.tableTools.min.js",
+ 									function() {
+ 										loadScript(
+ 												"js/plugin/datatables/dataTables.bootstrap.min.js",
+ 												pagefunction);
+ 									});
+ 						});
+ 			});
+	
+	$(window).unbind('gMapsLoaded');
+	$(window).bind('gMapsLoaded', pagefunction);
+	window.loadGoogleMaps();
+</script>

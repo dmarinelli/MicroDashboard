@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Java REST Application</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id="container" class="container">
+
+		<div class="modal-content" style="width: 50%;  margin-left: auto;    margin-right: auto;">
+
+
+
+
+
+			<div class="modal-header">
+
+
+
+				<div  class="text-right">
+					<a href="index.html" class="right_link">Login</a> <i class="fa fa-users"></i> 
+				</div>
+
+			</div>
+
+			<div class="modal-body">
+													<div class="form-group"  style="text-align:center;">
+
+						<div >
+
+							<div id="error_message" class="bg-danger"></div>
+
+						</div>
+					</div>
+
+				<form class="form-horizontal"  ng-submit="createUser(newUser)">
+
+					<div class="form-group">
+
+						<label for="firstName" class="col-sm-2 control-label">Name</label>
+
+						<div class="col-sm-10">
+
+							<input class="form-control" ng-model="newUser.firstName" type="text" id="firstName" placeholder="First Name"  required >
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label for="lastName" class="col-sm-2 control-label">Last Name</label>
+						<div class="col-sm-10">
+
+							<input class="form-control" ng-model="newUser.lastName" type="text" id="lastName" placeholder="Last Name"  required >
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label for="email" class="col-sm-2 control-label">Email Address</label>
+
+						<div class="col-sm-10">
+
+							<input class="form-control" ng-model="newUser.emailAddress" id="email" type="email" placeholder="Email"  required >
+
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label for="password" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+
+							<input class="form-control" ng-model="newUser.password" type="password" id="password" placeholder="Password"  password-validate  required >
+
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label for="password2" class="col-sm-2 control-label">Confirm Password</label>
+						<div class="col-sm-10">
+
+							<input class="form-control" type="password" id="password2" placeholder="Confirm Password"  password-validate   required >
+
+						</div>
+					</div>
+
+
+					<div class="form-group">
+
+						<div  class="col-sm-2 control-label"></div>
+						<div class="col-sm-10">
+
+							<input type="checkbox" value="true" name="agree" id="agree"  required >
+							<label for="agree" id="terms_label" >I agree to the <b><a href="terms.html" target="_blank">terms of service</a></b>.</label>
+
+						</div>
+					</div>
+
+
+
+					<div class="form-group">
+						<div  class="col-sm-2 control-label"></div>
+
+						<div class="col-sm-10">
+							<button  type="submit" id="login_button"  class="btn btn-success" >Sign Up</button>
+
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</form>
+
+			<!--footer-->
+
+			<div class="modal-footer">
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
+
+
+</body>
+</html>

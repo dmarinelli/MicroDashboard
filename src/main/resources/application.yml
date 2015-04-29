@@ -1,0 +1,5 @@
+zuul:
+  routes:
+    services:
+      path: /services/**
+      url: http://localhost:9001/services
